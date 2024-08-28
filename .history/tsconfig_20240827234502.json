@@ -1,0 +1,29 @@
+// {
+//   "files": [],
+//   "references": [
+//     { "path": "./tsconfig.app.json" },
+//     { "path": "./tsconfig.node.json" }
+//   ],
+//   "compilerOptions": {
+//     "types": ["node"],
+//     "baseUrl": ".", // Base URL configuration
+//     "paths": {
+//       "@/*": ["src/*"] // Path mapping configuration
+//     }
+//   },
+// }
+
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "types": ["node"], // Node.js types available globally
+    "baseUrl": ".", // Set the base URL for module resolution
+    "paths": {
+      "@/*": ["src/*"] // Alias configuration
+    }
+  }
+}
