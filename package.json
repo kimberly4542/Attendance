@@ -13,9 +13,11 @@
     "bootstrap": "^5.3.3",
     "bootstrap-datepicker": "^1.10.0",
     "vue": "^3.4.37",
+    "vue-print-nb": "^1.7.5",
     "vue-router": "^4.0.13",
     "vue3-apexcharts": "^1.5.3",
-    "vuex": "^4.0.2"
+    "vuex": "^4.0.2",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@types/node": "^22.5.0",

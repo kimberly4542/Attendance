@@ -15,10 +15,13 @@ import { RouterView } from "vue-router";
   </div>
   <HelloWorld msg="Vite + Vue" /> -->
   <!-- <Login /> -->
-  <RouterView />
+  <div class="font-sans">
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>
+/* Override Bootstrap's body font */
 .logo {
   height: 6em;
   padding: 1.5em;

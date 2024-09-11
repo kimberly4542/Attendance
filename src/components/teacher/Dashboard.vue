@@ -1,10 +1,10 @@
 <template>
   <div class="mb-2">
-    <h2 class="text-2xl font-semibold">Dashboard</h2>
+    <h2 class="text-4xl font-bold">Dashboard</h2>
   </div>
 
   <div class="mb-4">
-    <ol class="flex text-gray-600 text-sm m-0 p-0">
+    <ol class="flex text-gray-600 text-lg m-0 p-0">
       <li class="">
         <a
           href="#"
@@ -13,7 +13,7 @@
         >
       </li>
       <li class="text-gray-500 select-none px-2">/</li>
-      <li class="px-2 font-semibold">Dashboard</li>
+      <li class="px-2 font-bold">Dashboard</li>
     </ol>
   </div>
 
@@ -26,8 +26,8 @@
           <div class="col-xxl-4 col-md-6">
             <div class="card border-0 shadow-md">
               <div class="card-body">
-                <h5 class="text-lg">
-                  Present <span class="text-gray-400 text-sm">| Today</span>
+                <h5 class="text-xl font-semibold">
+                  Present <span class="text-gray-400 text-lg">| Today</span>
                 </h5>
 
                 <div class="d-flex align-items-center mt-4 mb-3">
@@ -37,9 +37,9 @@
                     <i class="fa-regular fa-user text-2xl text-yellow-400"></i>
                   </div>
                   <div class="ps-3">
-                    <h6 class="text-[28px] mb-0">145</h6>
-                    <span class="text-success small pt-1 fw-bold">12%</span>
-                    <span class="text-muted small pt-2 ps-1">increase</span>
+                    <h6 class="text-[40px] mb-0">145</h6>
+                    <span class="text-success text-base pt-1 fw-bold">12%</span>
+                    <span class="text-muted text-base pt-2 ps-1">increase</span>
                   </div>
                 </div>
               </div>
@@ -51,8 +51,8 @@
           <div class="col-xxl-4 col-md-6">
             <div class="card border-0 shadow-md">
               <div class="card-body">
-                <h5 class="text-lg">
-                  Absent <span class="text-gray-400 text-sm">| Today</span>
+                <h5 class="text-xl font-semibold">
+                  Absent <span class="text-gray-400 text-lg">| Today</span>
                 </h5>
 
                 <div class="d-flex align-items-center mt-4 mb-3">
@@ -62,9 +62,9 @@
                     <i class="fa-regular fa-user text-2xl text-yellow-400"></i>
                   </div>
                   <div class="ps-3">
-                    <h6 class="text-[28px] mb-0">15</h6>
-                    <span class="text-danger small pt-1 fw-bold">18%</span>
-                    <span class="text-muted small pt-2 ps-1">decrease</span>
+                    <h6 class="text-[40px] mb-0">15</h6>
+                    <span class="text-danger pt-1 fw-bold text-base">18%</span>
+                    <span class="text-muted text-base pt-2 ps-1">decrease</span>
                   </div>
                 </div>
               </div>
@@ -74,8 +74,9 @@
           <div class="col-xxl-4 col-md-6">
             <div class="card border-0 shadow-md">
               <div class="card-body">
-                <h5 class="text-lg">
-                  Attendance <span class="text-gray-400 text-sm">| Today</span>
+                <h5 class="text-xl font-semibold">
+                  Attendance
+                  <span class="text-gray-400 text-lg">| Today</span>
                 </h5>
 
                 <div class="d-flex align-items-center mt-4 mb-3">
@@ -85,9 +86,9 @@
                     <i class="fa-regular fa-user text-2xl text-yellow-400"></i>
                   </div>
                   <div class="ps-3">
-                    <h6 class="text-[28px] mb-0">145</h6>
-                    <span class="text-success small pt-1 fw-bold">12%</span>
-                    <span class="text-muted small pt-2 ps-1">increase</span>
+                    <h6 class="text-[40px] mb-0">145</h6>
+                    <span class="text-success pt-1 fw-bold text-base">12%</span>
+                    <span class="text-muted text-base pt-2 ps-1">increase</span>
                   </div>
                 </div>
               </div>
@@ -115,8 +116,8 @@
             </div>
 
             <div class="card-body">
-              <h5 class="text-lg">
-                Reports <span class="text-gray-400 text-sm">/ Today</span>
+              <h5 class="text-xl font-semibold">
+                Reports <span class="text-gray-400 text-lg">/ Today</span>
               </h5>
 
               <!-- Line Chart -->
@@ -135,9 +136,9 @@
       </div>
       <div class="col-lg-4">
         <div class="card border-0 shadow-md">
-          <h5 class="card-title p-3 text-lg">
+          <h5 class="card-title p-3 text-xl font-semibold">
             Attendance Report
-            <span class="text-gray-400 text-sm">| This Month</span>
+            <span class="text-gray-400 text-lg">| This Month</span>
           </h5>
 
           <apexchart
@@ -159,85 +160,6 @@ body {
   background-color: #1f2937;
 }
 </style>
-<!-- <script>
-import { defineComponent, ref } from 'vue'
-import VueApexCharts from 'vue3-apexcharts'
-
-export default defineComponent({
-  name: 'ReportsChart',
-  components: {
-    apexchart: VueApexCharts
-  },
-  setup() {
-    const series = ref([
-      {
-        name: 'Present',
-        data: [31, 40, 28, 51, 42, 82, 56]
-      },
-      {
-        name: 'Absent',
-        data: [11, 32, 45, 32, 34, 52, 41]
-      },
-      {
-        name: 'Attendance',
-        data: [15, 11, 32, 18, 9, 24, 11]
-      }
-    ])
-
-    const chartOptions = ref({
-      chart: {
-        height: 350,
-        type: 'area',
-        toolbar: {
-          show: false
-        }
-      },
-      markers: {
-        size: 4
-      },
-      colors: ['#4154f1', '#2eca6a', '#ff771d'],
-      fill: {
-        type: 'gradient',
-        gradient: {
-          shadeIntensity: 1,
-          opacityFrom: 0.3,
-          opacityTo: 0.4,
-          stops: [0, 90, 100]
-        }
-      },
-      dataLabels: {
-        enabled: false
-      },
-      stroke: {
-        curve: 'smooth',
-        width: 2
-      },
-      xaxis: {
-        type: 'datetime',
-        categories: [
-          '2018-09-19T00:00:00.000Z',
-          '2018-09-19T01:30:00.000Z',
-          '2018-09-19T02:30:00.000Z',
-          '2018-09-19T03:30:00.000Z',
-          '2018-09-19T04:30:00.000Z',
-          '2018-09-19T05:30:00.000Z',
-          '2018-09-19T06:30:00.000Z'
-        ]
-      },
-      tooltip: {
-        x: {
-          format: 'dd/MM/yy HH:mm'
-        }
-      }
-    })
-
-    return {
-      series,
-      chartOptions
-    }
-  }
-})
-</script> -->
 
 <script>
 import { defineComponent, ref } from "vue";

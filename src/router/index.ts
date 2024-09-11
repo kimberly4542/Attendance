@@ -2,7 +2,7 @@
 
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
 // import { useStore } from "vuex";
-import store from "@/store/index"
+import store from "@/store/index";
 import DashboardLayout from "../layout/Dashboard.vue";
 
 const routes: Array<RouteRecordRaw> = [
@@ -113,20 +113,20 @@ const routes: Array<RouteRecordRaw> = [
           role: "admin",
         },
       },
-      {
-        path: "Absence",
-        component: () =>
-          import(
-            /* webpackChunkName: "absence" */ "../components/admin/Absence.vue"
-          ),
-        name: "Absence",
-        meta: {
-          title: "Absence",
-          icon: "Absence",
-          affix: true,
-          role: "admin",
-        },
-      },
+      // {
+      //   path: "Absence",
+      //   component: () =>
+      //     import(
+      //       /* webpackChunkName: "absence" */ "../components/admin/Absence.vue"
+      //     ),
+      //   name: "Absence",
+      //   meta: {
+      //     title: "Absence",
+      //     icon: "Absence",
+      //     affix: true,
+      //     role: "admin",
+      //   },
+      // },
       {
         path: "AdminReport",
         component: () =>

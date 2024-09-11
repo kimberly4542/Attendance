@@ -1,4 +1,9 @@
-export default (await import('vue')).defineComponent({});
+import { mapGetters } from "vuex";
+export default (await import('vue')).defineComponent({
+    computed: {
+        ...mapGetters(["username"]), // Get the username from Vuex
+    },
+});
 ;
 function __VLS_template() {
     let __VLS_ctx;
@@ -41,6 +46,9 @@ function __VLS_template() {
             } }, ...{ class: ("nav-profile flex items-center no-underline hover:no-underline") }, href: ("#"), });
     __VLS_elementAsFunction(__VLS_intrinsicElements.img)({ src: ("../assets/profile-img.jpg"), alt: ("Profile"), ...{ class: ("w-9 h-9 rounded-full") }, });
     __VLS_elementAsFunction(__VLS_intrinsicElements.span, __VLS_intrinsicElements.span)({ ...{ class: ("md:block ml-2 text-yellow-400") }, });
+    (__VLS_ctx.username);
+    // @ts-ignore
+    [username,];
     if (typeof __VLS_styleScopedClasses === 'object' && !Array.isArray(__VLS_styleScopedClasses)) {
         __VLS_styleScopedClasses['header'];
         __VLS_styleScopedClasses['fixed'];

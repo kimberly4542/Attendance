@@ -96,18 +96,20 @@ const routes = [
                     role: "admin",
                 },
             },
-            {
-                path: "Absence",
-                component: () => import(
-                /* webpackChunkName: "absence" */ "../components/admin/Absence.vue"),
-                name: "Absence",
-                meta: {
-                    title: "Absence",
-                    icon: "Absence",
-                    affix: true,
-                    role: "admin",
-                },
-            },
+            // {
+            //   path: "Absence",
+            //   component: () =>
+            //     import(
+            //       /* webpackChunkName: "absence" */ "../components/admin/Absence.vue"
+            //     ),
+            //   name: "Absence",
+            //   meta: {
+            //     title: "Absence",
+            //     icon: "Absence",
+            //     affix: true,
+            //     role: "admin",
+            //   },
+            // },
             {
                 path: "AdminReport",
                 component: () => import(

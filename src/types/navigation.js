@@ -17,11 +17,11 @@ export const links = {
                         url: "/adminAttendance",
                         icon: "fa-regular fa-file-lines",
                     },
-                    {
-                        name: "Absence",
-                        url: "/absence",
-                        icon: "fa-regular fa-file-lines",
-                    },
+                    // {
+                    //   name: "Absence",
+                    //   url: "/absence",
+                    //   icon: "fa-regular fa-file-lines",
+                    // },
                     {
                         name: "Report",
                         url: "/adminReport",

@@ -11,6 +11,7 @@ import "@/assets/main.css";
 import { createApp } from "vue";
 
 import App from "./App.vue";
+import Print from "vue-print-nb";
 
 import router from "./router";
 
@@ -19,5 +20,6 @@ const app = createApp(App);
 
 app.use(router);
 app.use(store); // Add the store to your app
+app.use(Print);
 
 app.mount("#app");

@@ -14,7 +14,11 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}", // Include all relevant file types
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Arial", "Helvetica", "sans-serif"], // Define your sans-serif fonts here
+      },
+    },
   },
   plugins: [],
 };

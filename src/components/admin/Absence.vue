@@ -21,6 +21,7 @@
         <span class="card-title text-lg font-semibold">Absence Records</span>
 
         <!-- Default Table -->
+         
         <table class="mt-2 table-auto w-full border-collapse border border-gray-200">
           <thead class="bg-gray-100">
             <tr>

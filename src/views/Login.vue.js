@@ -29,9 +29,22 @@ const store = useStore();
 //     alert("Invalid credentials");
 //   }
 // };
+// const login = () => {
+//   if (validateCredentials()) {
+//     store.dispatch("login", user.value);
+//     // Navigate to the appropriate dashboard based on user role
+//     if (user.value === "teacher") {
+//       router.push({ path: "/teacherDashboard" });
+//     } else if (user.value === "admin") {
+//       router.push({ path: "/adminDashboard" });
+//     }
+//   } else {
+//     alert("Invalid credentials");
+//   }
+// };
 const login = () => {
     if (validateCredentials()) {
-        store.dispatch("login", user.value);
+        store.dispatch("login", { role: user.value, username: username.value });
         // Navigate to the appropriate dashboard based on user role
         if (user.value === "teacher") {
             router.push({ path: "/teacherDashboard" });
@@ -46,8 +59,8 @@ const login = () => {
 };
 const validateCredentials = () => {
     const validCredentials = {
-        teacher: { username: "teacherUsername", password: "teacherPassword" },
-        admin: { username: "adminUsername", password: "adminPassword" },
+        teacher: { username: "teacher", password: "teacher" },
+        admin: { username: "admin", password: "admin" },
     };
     return (user.value in validCredentials &&
         username.value ===

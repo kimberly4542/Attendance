@@ -1,10 +1,10 @@
 <template>
   <div class="">
     <div class="mb-2">
-      <h2 class="text-2xl font-semibold">Student</h2>
+      <h2 class="text-4xl font-bold">Student</h2>
     </div>
     <div class="">
-      <ol class="flex text-gray-600 text-sm m-0 p-0">
+      <ol class="flex text-gray-600 text-lg m-0 p-0">
         <li class="">
           <a
             href="#"
@@ -13,16 +13,35 @@
           >
         </li>
         <li class="text-gray-500 select-none px-2">/</li>
-        <li class="px-2 font-semibold">Student Sheet</li>
+        <li class="px-2 font-bold">Student Sheet</li>
       </ol>
     </div>
   </div>
+
+  <!-- Filter  -->
+
   <div class="bg-white border-0 shadow-md rounded mt-4 p-3">
     <div class="d-flex flex-wrap mt-2">
-      <div class="col-md-3 mb-2 px-2">
-        <div class="form-floating">
+      <div class="col-md-2 mb-2 px-1">
+        <input
+          type="text"
+          class="form-control h-14 w-full text-lg"
+          placeholder="ID Number"
+          id="idNumber"
+        />
+      </div>
+      <div class="col-md-3 mb-2 px-1">
+        <input
+          type="text"
+          class="form-control h-14 w-full text-lg"
+          placeholder="Name"
+          id="idNumber"
+        />
+      </div>
+      <div class="col-md-3 mb-2 px-1">
+        <div class="">
           <select
-            class="form-select"
+            class="form-select text-lg h-14"
             id="floatingSelect2"
             v-model="selectedSubject"
             aria-label="Subject"
@@ -32,98 +51,70 @@
             <option value="Oregon">Oregon</option>
             <option value="DC">DC</option>
           </select>
-          <label for="floatingSelect2">Subject</label>
-        </div>
-      </div>
-      <div class="col-md-3 mb-2 px-2">
-        <div class="form-floating">
-          <select
-            class="form-select"
-            id="floatingSelect3"
-            v-model="selectedSection"
-            aria-label="Section"
-          >
-            <option value="" disabled>Section</option>
-            <option value="Newton">Newton</option>
-            <option value="Celsius">Celsius</option>
-            <option value="Zara">Zara</option>
-          </select>
-          <label for="floatingSelect3">Section</label>
-        </div>
-      </div>
-      <div class="col-md-3 mb-3 px-2">
-        <div class="form-floating">
-          <input type="date" class="form-control" />
-          <label for="floatingSelect3">Date</label>
-        </div>
-      </div>
-      <div class="col-md-2 mb-3 px-2">
-        <div class="">
-          <button class="px-3 py-3 bg-black text-yellow-400 rounded">
-            Generate
-          </button>
         </div>
       </div>
 
-      <div class="card-body p-3">
-        <span class="card-title text-lg font-semibold">Student Sheet</span>
+      <!-- Filter End  -->
+      
+      <div class="card-body px-2 py-10">
+        <span class="card-title text-xl font-bold">Student Sheet</span>
 
         <!-- Default Table -->
         <table
           class="mt-2 table-auto w-full border-collapse border border-gray-200"
         >
-          <thead class="bg-gray-100">
+          <thead class="bg-gray-800 text-yellow-400">
             <tr>
               <th
                 scope="col"
-                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                class="px-6 py-3 text-left text-base font-bold uppercase tracking-wider"
               >
                 #
               </th>
               <th
                 scope="col"
-                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                class="px-6 py-3 text-left text-base font-bold uppercase tracking-wider"
               >
                 Student Name
               </th>
               <th
                 scope="col"
-                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                class="px-6 py-3 text-left text-base font-bold uppercase tracking-wider"
               >
-                Semester
+                ID
               </th>
               <th
                 scope="col"
-                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                class="px-6 py-3 text-left text-base font-bold uppercase tracking-wider"
               >
-                Total Present Day
+                Subject
               </th>
               <th
                 scope="col"
-                class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                class="px-6 py-3 text-left text-base font-bold uppercase tracking-wider"
               >
-                Total Absence Day
+                Teacher
               </th>
             </tr>
           </thead>
           <tbody class="divide-y divide-gray-200">
             <tr v-for="(student, index) in students" :key="index">
               <td
-                class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900"
+                class="px-6 py-2 whitespace-nowrap text-md font-medium text-gray-900"
               >
                 {{ index + 1 }}
               </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+              <td class="px-6 py-2 whitespace-nowrap text-base">
                 {{ student.name }}
               </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                {{ student.semester }}
+              <td class="px-6 py-2 whitespace-nowrap text-base">
+                {{ student.studId }}
               </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                {{ student.present }}
+              <td class="px-6 py-2 whitespace-nowrap text-base">
+                {{ student.subject }}
               </td>
-              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                {{ student.absent }}
+              <td class="px-6 py-2 whitespace-nowrap text-base">
+                {{ student.teacher }}
               </td>
             </tr>
           </tbody>
@@ -143,25 +134,34 @@ export default {
       selectedSubject3: "",
       students: [
         {
-          name: "Brandon Jacob",
+          name: "John Doe",
           studId: "1234",
-          semester: "First",
-          present: "15",
-          absent: "5",
+          subject: "Physics",
+          teacher: "Mr. Smith",
         },
         {
-          name: "Bridie Kessler",
+          name: "Sarah Connor",
+          studId: "5678",
+          subject: "Biology",
+          teacher: "Dr. Johnson",
+        },
+        {
+          name: "Michael Scott",
+          studId: "9101",
+          subject: "History",
+          teacher: "Ms. Williams",
+        },
+        {
+          name: "Emily Blunt",
           studId: "2345",
-          semester: "First",
-          present: "9",
-          absent: "4",
+          subject: "Chemistry",
+          teacher: "Mr. Anderson",
         },
         {
-          name: "Ashleigh Langosh",
-          studId: "3456",
-          semester: "First",
-          present: "16",
-          absent: "1",
+          name: "James Bond",
+          studId: "6789",
+          subject: "Mathematics",
+          teacher: "Prof. Brown",
         },
       ],
     };

@@ -15,6 +15,7 @@ function __VLS_template() {
     // CSS variable injection 
     // CSS variable injection end 
     let __VLS_resolvedLocalAndGlobalComponents;
+    __VLS_elementAsFunction(__VLS_intrinsicElements.div, __VLS_intrinsicElements.div)({ ...{ class: ("font-sans") }, });
     // @ts-ignore
     const __VLS_0 = {}
         .RouterView;
@@ -28,6 +29,7 @@ function __VLS_template() {
     ({}({}));
     const __VLS_5 = __VLS_nonNullable(__VLS_pickFunctionalComponentCtx(__VLS_0, __VLS_2));
     if (typeof __VLS_styleScopedClasses === 'object' && !Array.isArray(__VLS_styleScopedClasses)) {
+        __VLS_styleScopedClasses['font-sans'];
     }
     var __VLS_slots;
     return __VLS_slots;

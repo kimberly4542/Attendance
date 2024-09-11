@@ -1,10 +1,10 @@
 <template>
   <div class="mb-2">
-    <h2 class="text-2xl font-semibold">Dashboard</h2>
+    <h2 class="text-4xl font-bold">Dashboard</h2>
   </div>
 
   <div class="mb-4">
-    <ol class="flex text-gray-600 text-sm m-0 p-0">
+    <ol class="flex text-gray-600 text-lg m-0 p-0">
       <li class="">
         <a
           href="#"
@@ -13,7 +13,7 @@
         >
       </li>
       <li class="text-gray-500 select-none px-2">/</li>
-      <li class="px-2 font-semibold">Dashboard</li>
+      <li class="px-2 font-bold">Dashboard</li>
     </ol>
   </div>
 
@@ -26,8 +26,8 @@
           <div class="col-xxl-4 col-md-6">
             <div class="card border-0 shadow-md">
               <div class="card-body">
-                <h5 class="text-lg">
-                  Present <span class="text-gray-400 text-sm">| Today</span>
+                <h5 class="text-xl font-semibold">
+                  Present <span class="text-gray-400 text-lg">| Today</span>
                 </h5>
 
                 <div class="d-flex align-items-center mt-4 mb-3">
@@ -37,9 +37,11 @@
                     <i class="fa-regular fa-user text-2xl text-yellow-400"></i>
                   </div>
                   <div class="ps-3">
-                    <h6 class="text-[28px] mb-0">145</h6>
-                    <span class="text-success small pt-1 fw-bold">12%</span>
-                    <span class="text-muted small pt-2 ps-1">increase</span>
+                    <h6 class="text-[40px] mb-0">145</h6>
+                    <span class="text-success text-base pt-1 fw-bold">12%</span>
+                    <span class="text-muted text-base pt-2 ps-1 font-semibold"
+                      >increase</span
+                    >
                   </div>
                 </div>
               </div>
@@ -51,8 +53,8 @@
           <div class="col-xxl-4 col-md-6">
             <div class="card border-0 shadow-md">
               <div class="card-body">
-                <h5 class="text-lg">
-                  Absent <span class="text-gray-400 text-sm">| Today</span>
+                <h5 class="text-xl font-semibold">
+                  Absent <span class="text-gray-400 text-lg">| Today</span>
                 </h5>
 
                 <div class="d-flex align-items-center mt-4 mb-3">
@@ -62,20 +64,25 @@
                     <i class="fa-regular fa-user text-2xl text-yellow-400"></i>
                   </div>
                   <div class="ps-3">
-                    <h6 class="text-[28px] mb-0">15</h6>
-                    <span class="text-danger small pt-1 fw-bold">18%</span>
-                    <span class="text-muted small pt-2 ps-1">decrease</span>
+                    <h6 class="text-[40px] mb-0">15</h6>
+                    <span class="text-danger text-base pt-1 fw-bold">18%</span>
+                    <span class="text-muted text-base pt-2 ps-1 font-semibold"
+                      >decrease</span
+                    >
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- End Absent Card -->
+
           <!-- Attendance Card -->
           <div class="col-xxl-4 col-md-6">
             <div class="card border-0 shadow-md">
               <div class="card-body">
-                <h5 class="text-lg">
-                  Attendance <span class="text-gray-400 text-sm">| Today</span>
+                <h5 class="text-xl font-semibold">
+                  Attendance
+                  <span class="text-gray-400 text-lg">| Today</span>
                 </h5>
 
                 <div class="d-flex align-items-center mt-4 mb-3">
@@ -85,9 +92,11 @@
                     <i class="fa-regular fa-user text-2xl text-yellow-400"></i>
                   </div>
                   <div class="ps-3">
-                    <h6 class="text-[28px] mb-0">145</h6>
-                    <span class="text-success small pt-1 fw-bold">12%</span>
-                    <span class="text-muted small pt-2 ps-1">increase</span>
+                    <h6 class="text-[40px] mb-0">145</h6>
+                    <span class="text-success text-base pt-1 fw-bold">12%</span>
+                    <span class="text-muted text-base pt-2 ps-1 font-semibold"
+                      >increase</span
+                    >
                   </div>
                 </div>
               </div>
@@ -115,12 +124,11 @@
             </div>
 
             <div class="card-body">
-              <h5 class="text-lg">
-                Reports <span class="text-gray-400 text-sm">/ Today</span>
+              <h5 class="text-xl font-semibold">
+                Reports <span class="text-gray-400 text-lg">/ Today</span>
               </h5>
 
               <!-- Line Chart -->
-
               <apexchart
                 type="area"
                 height="350"
@@ -167,9 +175,9 @@
           </div>
 
           <div class="px-2">
-            <h5 class="px-2 text-lg">
+            <h5 class="px-2 text-xl font-semibold">
               Recent Activities
-              <span class="text-gray-400 text-sm">| Today</span>
+              <span class="text-gray-400 text-lg">| Today</span>
             </h5>
 
             <div class="activity space-y-4 m-3">
@@ -208,11 +216,13 @@
             </div>
           </div>
         </div>
+        <!-- End Recent Activity -->
 
+        <!-- Web Chart -->
         <div class="card border-0 shadow-md">
-          <h5 class="card-title p-3 text-lg">
+          <h5 class="card-title p-3 text-xl font-semibold">
             Budget Report
-            <span class="text-gray-400 text-sm">| This Month</span>
+            <span class="text-gray-400 text-lg">| This Month</span>
           </h5>
 
           <apexchart
@@ -222,9 +232,9 @@
             height="400"
           ></apexchart>
         </div>
+        <!--End Web Chart -->
       </div>
     </div>
-    <!-- End Recent Activity -->
   </section>
 </template>
 <style>
@@ -383,11 +393,6 @@ export default defineComponent({
         },
       },
     });
-
-    // return {
-    //   series,
-    //   chartOptions
-    // }
 
     // Dropdown state for filter options
     const isDropdownOpen = ref(false);
